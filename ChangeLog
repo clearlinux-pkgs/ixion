@@ -1,0 +1,72 @@
+ixion 0.13.0
+
+* add support for named expressions.
+
+* add support for boolean cell value type.
+
+* fix a bug in sheet data range computation function which incorrectly
+  reported data range when the first column is entirely filled to the
+  max row.
+
+* add experimental support for cmake-based build.  Currently tested
+  only on Windows.
+
+ixion 0.12.2
+
+* fix a parser bug that prevented valid R1C1 address from being
+  parsed.
+
+ixion 0.12.1
+
+* add --enable-threads configure switch, to optionally enable/disable
+  thread support.  Threads are enabled by default.
+
+ixion 0.12.0
+
+* remove boost::thread dependency from the public headers.
+
+* refactor the multi-threaded calculation code to make it more robust.
+
+* properly wait on formula calculation when fetching for a result
+  cache, without which threaded calculations would sometimes generate
+  wrong results.
+
+ixion 0.11.1
+
+* add get_columns() method to the model_context class to return an
+  array of column_store_t.
+
+* make it buildable with mdds-1.2.
+
+ixion 0.11.0
+
+* C++11 is a hard requirement.
+
+* implement R1C1 formula name resolver.
+
+* remove boost dependency from the public headers (except for
+  boost::thread).
+
+* fix incorrect life-cycle management of pooled string instances.
+
+* make it buildable on OSX.
+
+* other general code cleanups.
+
+* python
+
+  * correctly catch and translate general_error into python's, for
+    Document.append_sheet() method.
+
+  * make python module build configurable.
+
+  * add ixion.column_label() to convert numeric column indices into
+    column labels.  A1 and R1C1 are supported.
+
+ixion 0.9.1
+
+* include python bindings test in the tarball.
+
+* fix various portability problems in python bindings.
+
+* several minor build fixes.
