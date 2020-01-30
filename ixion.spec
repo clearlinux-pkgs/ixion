@@ -4,7 +4,7 @@
 #
 Name     : ixion
 Version  : 0.15.0
-Release  : 11
+Release  : 12
 URL      : https://gitlab.com/ixion/ixion/-/archive/0.15.0/ixion-0.15.0.tar.gz
 Source0  : https://gitlab.com/ixion/ixion/-/archive/0.15.0/ixion-0.15.0.tar.gz
 Summary  : Generic formula computation library
