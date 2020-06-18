@@ -4,7 +4,7 @@
 #
 Name     : ixion
 Version  : 0.15.0
-Release  : 14
+Release  : 15
 URL      : https://gitlab.com/ixion/ixion/-/archive/0.15.0/ixion-0.15.0.tar.gz
 Source0  : https://gitlab.com/ixion/ixion/-/archive/0.15.0/ixion-0.15.0.tar.gz
 Summary  : Generic formula computation library
@@ -40,7 +40,6 @@ Group: Development
 Requires: ixion-lib = %{version}-%{release}
 Requires: ixion-bin = %{version}-%{release}
 Provides: ixion-devel = %{version}-%{release}
-Requires: ixion = %{version}-%{release}
 Requires: ixion = %{version}-%{release}
 
 %description dev
@@ -94,12 +93,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583160455
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1592456554
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 %autogen --disable-static
 make  %{?_smp_mflags}
@@ -112,7 +110,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1583160455
+export SOURCE_DATE_EPOCH=1592456554
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ixion
 cp %{_builddir}/ixion-0.15.0/LICENSE %{buildroot}/usr/share/package-licenses/ixion/d22157abc0fc0b4ae96380c09528e23cf77290a9
