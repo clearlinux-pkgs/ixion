@@ -7,7 +7,7 @@
 #
 Name     : ixion
 Version  : 0.19.0
-Release  : 33
+Release  : 34
 URL      : https://gitlab.com/ixion/ixion/-/archive/0.19.0/ixion-0.19.0.tar.gz
 Source0  : https://gitlab.com/ixion/ixion/-/archive/0.19.0/ixion-0.19.0.tar.gz
 Summary  : Generic formula computation library
